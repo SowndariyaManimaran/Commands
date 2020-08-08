@@ -18,6 +18,8 @@ export PATH=$M2:$PATH -- > Paste above export path line after that give :wq
 
 source ~/.bash_profile
 
+env -> to check if the environment variables are set
+
 mvn -version
 
 

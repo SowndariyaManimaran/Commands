@@ -26,3 +26,7 @@ second linux  machine
 useradd -d /var/lib/jenkins jenkins
 cat /etc/passwd | grep -i jenkins
 passwd jenkins
+
+4. Goto jenkins--> configure system --> Publish over SSH --> give private key (key will be available in your jenkins server under /var/lib/jenkins/.ssh/   the file name id_rsa file)
+
+5. SSH Servers --> give name --> give the server name --> Give the remote directory (/var/lib/jenkins) --> apply it and then test  the connection

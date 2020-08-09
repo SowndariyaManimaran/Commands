@@ -31,12 +31,26 @@ yum install jenkins -y
 
 systemctl restart jenkins;systemctl enable jenkins;systemctl status jenkins
 
-The following plugins needs to be installed
+Open Public IP of this server in browser
+To unlock Jenkins do below in server
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Take the pwd from root and unlock Jenkins and install suggessted Plugins
+
+Create first Admin User by providing credentials
+
+Goto manage Jenkins. The following plugins needs to be installed extra
 
 dashboard view
 Build Pipeline
 Deploy to container
 Email Extension Template
+
+Go to GlobalToolConfiguration and set JDK and Mvn path
+javahome=/usr/lib/jvm/java-1.8.0
+mvnhome=/usr/local/apache-maven
+
+Create New Maven project --> Give Git path and build
 
 [root@master java-1.8.0]# cat /var/lib/jenkins/secrets/initialAdminPassword
 9da04e163934413fbb5128977ec567bb

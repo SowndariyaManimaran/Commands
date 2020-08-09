@@ -37,6 +37,8 @@ yum install jfrog-artifactory-oss
 
 vim /opt/jfrog/artifactory/app/bin/artifactory.default --> Just for reference
 
+Give :q! for eiting without writing 
+
 change heap size to 512mb --> if you want play in testing this also just for reference
 
 

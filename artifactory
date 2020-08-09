@@ -64,6 +64,16 @@ vim /usr/share/tomcat/conf/tomcat-users.xml
 
 systemctl restart artifactory;systemctl enable artifactory;systemctl enable tomcat;systemctl restart tomcat
 
+open Public ip of tomcat server from google cloud with 8080
+Tomcat server will be open
+Login in to manager and check no war files are deployed yet
+Go to Jenkins & create post build action as
+
+Deploy .war/.ear to container
+war file - **/*.war
+Select Tomcat & give creds configure above (<user username="admin" password="adminadmin") to connect
+
+
 http://192.168.122.32:8080/
 
 http://192.168.149.22:8081/artifactory/

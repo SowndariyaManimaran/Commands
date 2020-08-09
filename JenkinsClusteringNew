@@ -1,0 +1,28 @@
+SEND BUILD Artifacts OVER SSH
+
+1.install publish over ssh plugin in jenkins server.
+
+2.
+in both machines 
+
+vim /etc/ssh/sshd_config
+
+PasswordAuthentication no (comment this line)
+PasswordAuthentication Yes (UN-comment this line)
+
+:wq
+
+service sshd restart
+
+
+3. in jenkins server
+
+su - -s /bin/bash jenkins
+ssh-keygen
+
+
+second linux  machine
+
+useradd -d /var/lib/jenkins jenkins
+cat /etc/passwd | grep -i jenkins
+passwd jenkins
